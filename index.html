@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Interactive elements</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular" rel="stylesheet" />
+
+   <link rel="stylesheet" href="styles/checkbox.css">
+   <link rel="stylesheet" href="styles/map.css">
+   <link rel="stylesheet" href="styles/scroll.css">
+   <link rel="stylesheet" href="styles/select.css">
+   <link rel="stylesheet" href="styles/validate&mask.css">
+   <link rel="stylesheaet" href="styles/tooltip.css">
+
+   <style>
+      * {
+         box-sizing: border-box;
+
+         font-family: 'Open Sans', sans-serif;
+         font-weight: normal;
+         color: #333;
+
+         margin-block-start: 0;
+         margin-block-end: 0;
+         margin-inline-start: 0px;
+         margin-inline-end: 0px
+      }
+
+      body {
+         background: #424242;
+      }
+
+      .wrapper {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         width: 100vw;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrapper">
+
+      <div class="checkboxes">
+         <p class="checkboxes__title">Категории:</p>
+
+         <label class="checkbox-box" for="checkbox-1">
+            <span class="checkbox-box__text">Динозавры</span>
+            <input class="checkbox-box__real-checkbox" id="checkbox-1" type="checkbox" checked></input>
+            <span class="checkbox-box__custom-checkbox"></span>
+         </label>
+
+         <label class="checkbox-box" for="checkbox-2">
+            <span class="checkbox-box__text">Медведи</span>
+            <input class="checkbox-box__real-checkbox" id="checkbox-2" type="checkbox"></input>
+            <span class="checkbox-box__custom-checkbox"></span>
+         </label>
+
+         <label class="checkbox-box" for="checkbox-3">
+            <span class="checkbox-box__text">Черепахи</span>
+            <input class="checkbox-box__real-checkbox" id="checkbox-3" type="checkbox"></input>
+            <span class="checkbox-box__custom-checkbox"></span>
+         </label>
+
+         <label class="checkbox-box" for="checkbox-4">
+            <span class="checkbox-box__text">Пингвины</span>
+            <input class="checkbox-box__real-checkbox" id="checkbox-4" type="checkbox"></input>
+            <span class="checkbox-box__custom-checkbox"></span>
+         </label>
+
+         <label class="checkbox-box" for="checkbox-5">
+            <span class="checkbox-box__text">Волки</span>
+            <input class="checkbox-box__real-checkbox" id="checkbox-5" type="checkbox"></input>
+            <span class="checkbox-box__custom-checkbox"></span>
+         </label>
+
+         <label class="checkbox-box" for="checkbox-6">
+            <span class="checkbox-box__text">Страусы</span>
+            <input class="checkbox-box__real-checkbox" id="checkbox-6" type="checkbox"></input>
+            <span class="checkbox-box__custom-checkbox"></span>
+         </label>
+      </div>
+
+      <div class="select">
+
+      </div>
+
+   </div>
+</body>
+
+</html>
