@@ -1,0 +1,12 @@
+.map {
+   width: 460px;
+   height: 460px;
+
+}
+
+.ymaps-2-1-79-map-copyrights-promo,
+.ymaps-2-1-79-copyright__wrap,
+.ymaps-2-1-79-controls__control,
+.ymaps-2-1-79-controls-pane {
+   display: none !important;
+}

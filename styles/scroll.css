@@ -1,0 +1,28 @@
+.scroll {
+   width: 400px;
+   height: 310px;
+   padding: 20px 30px;
+   background-color: #fff;
+   font-size: 14px;
+   line-height: 24px;
+}
+
+.simplebar-scrollbar {
+   height: 100%;
+}
+
+.simplebar-scrollbar::before {
+   width: 6px;
+   background-color: #CCB26E;
+   border-radius: 5px;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+   opacity: 1
+}
+
+.simplebar-track.simplebar-vertical {
+   top: 7px;
+   bottom: 7px;
+   right: 3.5px;
+}

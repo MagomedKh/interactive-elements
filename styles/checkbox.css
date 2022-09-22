@@ -7,6 +7,10 @@
    border-radius: 10px;
 }
 
+.checkboxes>*:not(:first-child) {
+   user-select: none;
+}
+
 .checkboxes__title {
    font-weight: 600;
    font-size: 18px;
@@ -45,8 +49,9 @@
    display: block;
    width: 13px;
    height: 13px;
-   background: url(../images/check-mark.svg) no-repeat center center;
+   background: url(../images/check-mark.svg) no-repeat 2.4px center;
    opacity: 0;
+   transform: scale(1.25);
    transition: opacity .1s ease-in-out;
 }
 
