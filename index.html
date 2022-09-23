@@ -19,6 +19,8 @@
    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
    <script src="scripts/inputmaskPlug.js"></script>
    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+   <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 
    <!-- My files -->
    <link rel="stylesheet" href="styles/checkbox.css">
@@ -26,20 +28,22 @@
    <link rel="stylesheet" href="styles/scroll.css">
    <link rel="stylesheet" href="styles/select.css">
    <link rel="stylesheet" href="styles/form.css">
-   <link rel="stylesheaet" href="styles/tooltip.css">
+   <link rel="stylesheet" href="styles/tooltip.css">
 
    <script src="scripts/select.js" defer></script>
    <script src="scripts/yandexMap.js" defer></script>
    <script src="scripts/scroll.js" defer></script>
    <script src="scripts/form.js" defer></script>
+   <script src="scripts/tooltip.js" defer></script>
+
 
    <style>
       * {
          box-sizing: border-box;
 
+         color: inherit;
          font-family: 'Open Sans', sans-serif;
          font-weight: normal;
-         color: #333;
 
          margin-block-start: 0;
          margin-block-end: 0;
@@ -49,24 +53,50 @@
 
       body {
          background: #424242;
+         color: #333;
+         min-width: 520px;
       }
 
       .wrapper {
+         max-width: calc(1200px + 26%);
+         margin: 0 auto;
          display: flex;
-         justify-content: flex-start;
+         justify-content: space-between;
          align-items: center;
          flex-wrap: wrap;
-         height: 100vh;
-         width: 100vw;
-         padding: 3%;
+         height: 100%;
+         width: 100%;
+         padding: 5% 13%;
       }
 
-      .wrapper>*:not(:last-child) {
-         margin-right: 10vh;
+      .wrapper>*:not(:nth-child(2n)) {
+         margin-right: 15%;
       }
 
-      .wrapper>* {
-         margin-bottom: 10vh;
+      .wrapper>*:not(:nth-last-child(-n +2)) {
+         margin-bottom: 15%;
+      }
+
+      @media (max-width: 630px) {
+         .wrapper {
+            flex-wrap: nowrap;
+         }
+      }
+
+      @media (max-width: 1367px) {
+         .wrapper {
+            flex-direction: column;
+         }
+
+         .wrapper>*:not(:last-child) {
+            margin: 0 0 17%;
+         }
+      }
+
+      @media (min-width: 1560px) {
+         .wrapper>*:not(:nth-child(2n)) {
+            margin-right: 25%;
+         }
       }
    </style>
 
@@ -154,6 +184,19 @@
 
          <button class="form__btn" type="submit">Заказать</button>
       </form>
+
+      <div class="tooltip-block">
+         <p class="tooltip-block__text">
+            Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления
+            внешнеэкономических политик.
+            <svg class="tooltip-block__icon" id="tooltip-block__icon" tabindex="0" width="16" height="16"
+               viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z"
+                  fill="#BCBCBC" />
+            </svg>
+         </p>
+      </div>
 
    </div>
 </body>

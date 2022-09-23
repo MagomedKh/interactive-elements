@@ -1,0 +1,38 @@
+.tooltip-block {
+   padding: 20px 78px 20px 29px;
+   background-color: #fff;
+}
+
+.tooltip-block__text {
+   max-width: 271px;
+   font-size: 14px;
+   line-height: 24px;
+}
+
+.tooltip-block__icon {
+   box-sizing: content-box;
+   display: inline-block;
+   width: 16px;
+   height: 16px;
+   padding: 3px;
+   position: relative;
+   top: 3px;
+   left: -2px;
+}
+
+.tooltip-block__icon path,
+.tooltip-block__icon path {
+   transition: fill .1s ease-in-out;
+}
+
+.tooltip-block__icon:hover path,
+.tooltip-block__icon:focus path {
+   fill: #CCB26E;
+}
+
+.tippy-box[data-theme~='tomato'] {
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 16px;
+   color: #fff;
+}
