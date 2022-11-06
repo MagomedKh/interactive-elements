@@ -7,12 +7,14 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Interactive elements</title>
 
+   <!-- Attached files -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
       integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular" rel="stylesheet" />
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+
    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
    <script src="https://api-maps.yandex.ru/2.1/?f7146035-df51-4ca4-b63d-31c2b2854ab3&lang=ru_RU"
       type="text/javascript"> </script>
@@ -30,6 +32,7 @@
    <link rel="stylesheet" href="styles/form.css">
    <link rel="stylesheet" href="styles/tooltip.css">
 
+
    <script src="scripts/select.js" defer></script>
    <script src="scripts/yandexMap.js" defer></script>
    <script src="scripts/scroll.js" defer></script>
@@ -37,6 +40,7 @@
    <script src="scripts/tooltip.js" defer></script>
 
 
+   <!-- General styles -->
    <style>
       * {
          box-sizing: border-box;
@@ -60,21 +64,20 @@
       .wrapper {
          max-width: calc(1200px + 26%);
          margin: 0 auto;
+
          display: flex;
+         flex-direction: column;
          justify-content: space-between;
          align-items: center;
          flex-wrap: wrap;
+
          height: 100%;
          width: 100%;
-         padding: 5% 13%;
+         padding: 14% 13%;
       }
 
-      .wrapper>*:not(:nth-child(2n)) {
-         margin-right: 15%;
-      }
-
-      .wrapper>*:not(:nth-last-child(-n +2)) {
-         margin-bottom: 15%;
+      .wrapper>*:not(:last-child) {
+         margin-bottom: 25%;
       }
 
       @media (max-width: 630px) {
@@ -90,12 +93,6 @@
 
          .wrapper>*:not(:last-child) {
             margin: 0 0 17%;
-         }
-      }
-
-      @media (min-width: 1560px) {
-         .wrapper>*:not(:nth-child(2n)) {
-            margin-right: 25%;
          }
       }
    </style>
